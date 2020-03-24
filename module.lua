@@ -4,7 +4,7 @@ local module = {}
 
 module.x = 0
 
-function module.f()
+module.f = function()
 end
 
 return module
