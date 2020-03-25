@@ -1,4 +1,5 @@
 local composer = require("composer")
+local ball = require("src.objects.ball")
 
 local scene = composer.newScene()
 
@@ -10,7 +11,7 @@ end
 
 function scene:show(event)
     if event.phase == "will" then
-        -- Reset scene state
+        -- Init/reset scene state
     elseif event.phase == "did" then
         -- Start physics
         -- Start timers/transitions
@@ -26,6 +27,7 @@ function scene:hide(event)
         -- Remove runtime/object listeners
         -- Stop scene audio
     elseif event.phase == "did" then
+        -- Optionally remove/recycle this scene
     end
 end
 
